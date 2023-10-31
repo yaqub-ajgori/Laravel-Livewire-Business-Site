@@ -18,9 +18,7 @@
 
 	<!-- # CSS Plugins -->
 	<link rel="stylesheet" href="{{ asset('frontend/plugins/slick/slick.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/plugins/font-awesome/fontawesome.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/plugins/font-awesome/brands.css') }}">
-	<link rel="stylesheet" href="{{ asset('frontend/plugins/font-awesome/solid.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
@@ -33,16 +31,16 @@
 <header class="navigation bg-tertiary">
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
-			<a class="navbar-brand" href="{{ route('home') }}">
+			<a class="navbar-brand" href="{{ route('home') }}" wire:navigate>
 				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{ asset('frontend/images/logo.png') }}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
-					<li class="nav-item"> <a class="nav-link" href="{{ route('home') }}">Home</a></li>
+					<li class="nav-item"> <a class="nav-link" href="{{ route('home') }}" wire:navigate>Home</a></li>
 					<li class="nav-item "> <a class="nav-link" href="about.html">About Us</a></li>
-					<li class="nav-item "> <a class="nav-link" href="services.html">Services</a></li>
+					<li class="nav-item "> <a class="nav-link" href="{{ route('services') }}" wire:navigate>Services</a></li>
 					<li class="nav-item "> <a class="nav-link" href="team.html">Our Team</a></li>
 					<li class="nav-item "><a class="nav-link " href="blog.html">Blog</a></li>
 					<li class="nav-item "><a class="nav-link " href="faq.html">FAQ</a></li>

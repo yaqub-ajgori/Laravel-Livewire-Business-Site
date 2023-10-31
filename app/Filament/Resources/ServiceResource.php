@@ -40,7 +40,7 @@ class ServiceResource extends Resource
                 Forms\Components\Textarea::make('short_description')
                     ->maxLength(255)
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')
@@ -58,6 +58,7 @@ class ServiceResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('is_active')
+                    ->label('Status')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
