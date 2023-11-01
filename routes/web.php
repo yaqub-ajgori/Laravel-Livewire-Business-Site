@@ -3,6 +3,7 @@
 use App\Livewire\HomePage;
 use App\Livewire\ServicePage;
 use App\Livewire\SingleServicePage;
+use App\Livewire\TeamPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,10 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', HomePage::class)->name('home');
 Route::get('/services', ServicePage::class)->name('services');
 Route::get('/services/{id}', SingleServicePage::class)->name('single-service');
+Route::get('/teams', TeamPage::class )->name('teams');
